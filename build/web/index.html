@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Web aplication project">
+        <meta name="keywords" content="html, practicas, framework">
+        <meta name="author"  content="Christian Muñoz">
+        <link href="style/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="style/font_awesome_5_15_3/css/all.css" rel="stylesheet" type="text/css"/>
+        <link href="style/loginStyle.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>       
+        <div class="container-fluid">
+            
+            <div class="row">
+                <section class="text-center col-12">
+                    <img src="img/mayspa.png" class="img-fluid logo" alt=""/>
+                </section>
+                
+                <section class="text-center col-12">
+                    <h3 class="text-light">Usuario</h3>
+                    <input type="text" id="txtUser" name="txtUser">
+                    <br>
+                    <h3 class="text-light">Contraseña</h3>
+                    <input type="password" id="txtPassword" name="txtPassword">
+                    
+                </section>
+                
+                <div class="text-center col-12">
+                <br>
+                <button type="button" class="btn btn-success btn-lg" onclick="validate();">Ingresar</button>
+                </div>
+            </div>
+            
+            <br>
+            <div class="row">
+                <footer class="col-12 border border-dark p-1 mb-2 bg-dark text-white fs-6 text-center">
+                    <p>Aplicacion desarrollada para la empresa MySpa</p>
+                    <p>Desarrollada por la empresa SOFTTECH</p>
+                    <p>Politicas de privacidad</p>
+                </footer>
+            </div>  
+            
+        </div>
+        
+        <script src="js/jquery/jquery-3.6.0.min.js"></script>
+        <script src="style/bootstrap/js/bootstrap.js" ></script>
+        <script src="style/font_awesome_5_15_3/js/all.js" ></script>
+        <script src="style/sweetalert2/sweetalert2.all.js" type="text/javascript"></script>
+        
+        <script src="js/login.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<div id="agregarHorario">
+    <div class="row">
+                <h1 class="text-center col-12">Gestion de horarios</h1>
+            </div>
+                <div class="row">
+                    <nav class="text-center mb-5 btn-group col-12">
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openDetailSchedule();" >Agregar horarios</button>
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openListSchedule();" >Despliege de catalogo</button>
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openSearchSchedule();" >Buscar horarios</button>
+                    </nav>
+                </div>
+<!--****************************************************** Formulario ****************************************************************************-->
+                <div class="row" id="scheduleDetail" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Formulario para agregar horarios</h3>
+                        </div> 
+                        <div class="card-body">
+                    <label class="form-label" for="txtNSchedule">Código de horario:</label>
+                    <input type="number" class="form-control" id="txtNSchedule">
+                    <br>  
+                    <label for="txtStartTime">Hora Inicio:</label>
+                    <input type="time" class="form-control" id="txtStartTime" name="txtStartTime">
+                    <br>  
+                    <label for="txtEndTime">Hora Fin:</label>
+                    <input type="time" class="form-control" id="txtEndTime" name="txtEndTime">
+                    <br>
+                    </div>
+                    </div>
+                    <button class="btn btn-outline-primary col-3 mb-5 mt-1" id="guardar" onclick="saveSchedule();">
+                    <svg class="svg-inline--fa fa-save fa-w-14" aria-hidden="true" 
+                      data-prefix="fas" data-icon="save" role="img"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                     <path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 
+                      80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346
+                      0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 
+                      12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 
+                      11.996 0 0 1 320 111.48z"></path></svg>
+                <!-- <i class="fas fa-save"></i> Font Awesome fontawesome.com --> Guardar
+                </button>
+                </div>
+<!--***********************************Catalogo ****************************************************************************-->
+                <div class="row" id="scheduleList">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Catalogo de horarios</h3>
+                        </div> 
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <table class="table table-hover" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Clave de horario</th>
+                                    <th scope="col">Hora de Inicio</th>
+                                    <th scope="col">Hora de Fin</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbSchedule"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </div>
+<!--***********************************Busqueda ****************************************************************************-->
+                <div class="row" id="scheduleSearch" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Busqueda de horario</h3>
+                        </div>
+                        <div class="card-body">
+                            <label class="form-label" for="txtNScheduleSearch">Código de horario:</label>
+                            <input type="number" class="form-control" id="txtNScheduleSearch">
+                            <br>
+                            <h4 class="text-center">O</h4>     
+                            <label class="form-label" for="txtStartTimeSearch">Hora Inicio:</label>
+                            <input type="text" class="form-control" id="txtStartTimeSearch">
+                            <br>
+                            <h4 class="text-center">O</h4>    
+                            <label class="form-label" for="txtEndTimeSearch">Hora Fin:</label>
+                            <input type="text" class="form-control" id="txtEndTimeSearch">
+                            <br>
+                        </div>
+                    </div>
+                    <center><button class="btn btn-outline-success col-3 mb-5 mt-1" id="search" onclick="searchSchedule();">
+                    <svg class="svg-inline--fa fa-save fa-w-14" ></svg>
+                    Buscar
+                    </button></center>
+                </div>
+
+                    <div class="row" id="scheduleListSearch" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Resultado de busqueda</h3>
+                        </div> 
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <table class="table table-hover" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Clave de horario</th>
+                                    <th scope="col">Hora de Inicio</th>
+                                    <th scope="col">Hora de Fin</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbScheduleSearch"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+                    </div>
+</div>

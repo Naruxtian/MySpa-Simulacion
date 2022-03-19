@@ -1,0 +1,124 @@
+<div id="agregarSala">
+    <div class="row">
+                <h1 class="text-center col-12">Gestion de salas</h1>
+            </div>
+                <div class="row">
+                    <nav class="text-center mb-5 btn-group col-12">
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openDetailRoom();" >Agregar salas</button>
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openListRoom();" >Despliege de catalogo</button>
+                        <button class="btn btn-info text-white border border-3 border-primary shadow" onclick="openSearchRoom();" >Buscar salas</button>
+                    </nav>
+                </div>
+<!--****************************************************** Formulario ****************************************************************************-->
+                <div class="row" id="roomDetail" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Formulario para agregar salas</h3>
+                        </div> 
+                        <div class="card-body">
+                    <label class="form-label" for="txtNRoom">Código de sala:</label>
+                    <input type="number" class="form-control" id="txtNRoom">
+                    <br>  
+                    <label class="form-label" for="txtNBranch">N° Sucursal:</label>
+                    <input type="number" class="form-control" id="txtNBranch">
+                    <br>  
+                    <label class="form-label" for="txtNameRoom">Nombre de la sala:</label>
+                    <input type="text" class="form-control" id="txtNameRoom">
+                    <br>
+                    <label class="form-label" for="txtDescriptionRoom">Descripción:</label>
+                    <textarea class="form-control" id="txtDescriptionRoom"></textarea>
+                     <br>
+                    <label class="form-label" for="txtImgRoom">Fotografia:</label>
+                    <input type="file" class="form-control" id="txtImgRoom">
+                     <br>
+                    <label class="form-label" for="txtRouteRoom">Ruta de la foto:</label>
+                    <input type="text" class="form-control" id="txtRouteRoom">
+                    <br>
+                    </div>
+                    </div>
+                    <button class="btn btn-outline-primary col-3 mb-5 mt-1" id="guardar" onclick="saveRoom();">
+                    <svg class="svg-inline--fa fa-save fa-w-14" aria-hidden="true" 
+                      data-prefix="fas" data-icon="save" role="img"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                     <path fill="currentColor" d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 
+                      80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346
+                      0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 
+                      12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 
+                      11.996 0 0 1 320 111.48z"></path></svg>
+                <!-- <i class="fas fa-save"></i> Font Awesome fontawesome.com --> Guardar
+                </button>
+                </div>
+<!--***********************************Catalogo ****************************************************************************-->
+                <div class="row" id="roomList">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Catalogo de salas</h3>
+                        </div> 
+                        <div class="table-responsive">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <table class="table table-hover" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Clave de sala</th>
+                                    <th scope="col">Numero de sucursal</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Fotografia</th>
+                                    <th scope="col">Ruta</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbRoom"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>        
+<!--***********************************Busqueda ****************************************************************************-->
+                <div class="row" id="roomSearch" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Busqueda de sala</h3>
+                        </div>
+                        <div class="card-body">
+                            <label class="form-label" for="txtNRoomSearch">Código de sala:</label>
+                            <input type="number" class="form-control" id="txtNRoomSearch">
+                            <br>
+                            <h4 class="text-center">O</h4>        
+                            <label class="form-label" for="txtNameRoomSearch">Nombre de la sala:</label>
+                            <input type="text" class="form-control" id="txtNameRoomSearch">
+                            <br>
+                        </div>
+                    </div>
+                    <center><button class="btn btn-outline-success col-3 mb-5 mt-1" id="search" onclick="searchRoom();">
+                    <svg class="svg-inline--fa fa-save fa-w-14" ></svg>
+                    Buscar
+                    </button></center>
+                </div>
+
+                    <div class="row" id="roomListSearch" style="display: none">
+                    <div class="card col-12">
+                        <div class="card-title">
+                            <h3 class="text-center">Resultado de busqueda</h3>
+                        </div> 
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <table class="table table-hover" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Clave de sala</th>
+                                    <th scope="col">Numero de sucursal</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Fotografia</th>
+                                    <th scope="col">Ruta</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbRoomSearch"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    </div>            
+</div>

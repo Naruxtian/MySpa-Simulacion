@@ -1,0 +1,92 @@
+.icon{
+width: 50px;
+height: auto;
+}
+#guardar{
+margin:0 40%;
+}
+#imgMySpa{
+width: 30%;
+height: auto;
+margin-right: 5%;
+}
+#navMenu{
+top: 0;
+right:-100%;
+margin:0;
+position: fixed;
+z-index: 100;
+overflow: hidden;
+background-color: rgb(34, 180, 20);
+}
+header ul{
+list-style: none;
+}
+header nav ul li a{
+text-decoration: none;
+}
+.btnmenu{
+margin-left:40%;
+}
+.navegador{
+background-color: rgb(77, 170, 255);
+}
+#navMenu ul li{
+padding: 5px;
+}
+#navMenu ul li:hover{
+background-color:rgb(42, 218, 26 );
+}
+
+#iconseleccion{
+margin-left:40%;
+margin-top: 15%;
+width: 50px;
+height: auto;
+}
+.menu a{
+text-decoration: none;
+display:inline-flex;
+}
+.menu a p{
+margin-top: 5%;
+font-size: 3rem;
+color: white;
+}
+#btndespegable{
+margin-top: 7%;
+margin-left: 90%;
+}
+
+@media(max-width:700px){
+.icon{
+width: 30px;
+}
+.btnmenu{
+margin-top: 8%;
+margin-left:90%;
+width: 30px;
+height: auto;
+}
+#iconseleccion{
+margin-top: 25%;
+width: 30px;
+height: auto;
+}
+#btndespegable{
+width: 35px;
+height: auto;
+margin-right: 15px;
+}
+}
+@media(max-width:600px){
+
+.menu a p{
+margin-top: 5%;
+font-size: 0px;
+color: white;
+}
+.btnmenu{
+margin-top: 15%;
+}
+}
